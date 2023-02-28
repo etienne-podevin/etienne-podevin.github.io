@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;}
+
+#profile {
+    padding: 15px;
+    background: #303642;
+    display: grid;
+    place-items: normal;}
+
+#profile > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+
+    animation-duration: 1.2s;
+    animation-name: glissement-name;}
+
+#profile > div > #profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;}
+
+#profile > div > #name {
+    font-family: monospace;
+    font-size: x-large;
+    color: white;
+    place-self: center;
+    margin: 0;}
+
+@keyframes glissement-name {
+    from {
+        margin-left: 20%;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }}
+
+@media (min-width: 1200px) {
+    #profile > div > #name {
+        font-size: xx-large;
+    }
+    #profile > div > #profile-img { 
+        width: 150px;
+        height: 150px;
+    }
+    #profile {
+        padding: 25px;
+    }}
+
+#description {
+    padding: 15px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;}
