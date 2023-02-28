@@ -22,12 +22,25 @@ body {
     height: 80px;
     border-radius: 100%;}
 
-#profile > div > #name {
+#profile > div > #info-profile {
     font-family: monospace;
     font-size: x-large;
     color: white;
     place-self: center;
     margin: 0;}
+
+#profile > div > #info-profile > h1 {
+    margin: 0;
+    font-weight:100;
+    white-space: nowrap;}
+
+#profile > div > #info-profile > p {
+    margin: 0;
+    font-weight:100;
+    font-size: x-large;}
+
+#profile > div > #info-profile #prenom {
+    font-weight:bold;}
 
 @keyframes glissement-name {
     from {
@@ -39,8 +52,64 @@ body {
         opacity: 1;
     }}
 
+#description {
+    padding: 25px 15px 0px 15px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;}
+
+h2 {
+    color: #303642;
+    margin: 0;}
+
+#parcours {
+    list-style: none;
+    font-size: large;
+    padding: 0;}
+
+.li-groupe {
+    background-color: rgb(240, 240, 240);
+
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px #cccbcb;
+    border-radius: 8px;}
+
+.li-groupe p {
+    margin: 0;}
+
+.li-groupe .intitule {
+    font-weight: 900;
+    padding-bottom: 5px;}
+
+.li-groupe .entreprise {
+    font-size: small;}
+
+.li-groupe ul {
+    list-style: circle;
+    padding: 20px 0px 20px 20px;}
+
+.li-groupe ul li {
+    padding-bottom: 5px;
+    font-size: small;}
+
+.li-groupe .date {
+    font-size: small;
+    place-self: end;
+    font-weight: 600;}
+
+footer {
+    background-color: #303642;
+    height: 60px;
+}
+
 @media (min-width: 1200px) {
-    #profile > div > #name {
+    #profile > div > #info-profile {
         font-size: xx-large;
     }
     #profile > div > #profile-img { 
@@ -49,11 +118,8 @@ body {
     }
     #profile {
         padding: 25px;
+    }
+    #description {
+        padding-left: 25px;
+        padding-right: 25px;
     }}
-
-#description {
-    padding: 15px;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;}
